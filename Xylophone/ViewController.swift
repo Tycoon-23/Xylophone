@@ -6,14 +6,40 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
+    
+    var player: AVAudioPlayer!
+    //var soundName: String = "null" //1
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBAction func keyPressed(_ sender: UIButton) {
+        //soundName = sender.titleLabel!.text! //OR
+        //soundName = sender.title(for: .normal)! //OR
+        //soundName = sender.currentTitle!
+        playSound(soundName: sender.title(for: .normal)!)
     }
-
-
+    
+    //using method 1
+    /*func playSound() {
+        let url = Bundle.main.url(forResource: soundName, withExtension: "wav")
+        player = try! AVAudioPlayer(contentsOf: url!)
+        player.play()
+                
+    }*/
+    
+    //using method 2
+    func playSound(soundName: String) {
+        let url = Bundle.main.url(forResource: soundName, withExtension: "wav")
+        player = try! AVAudioPlayer(contentsOf: url!)
+        player.play()
+                
+    }
 }
 
+
+/* There are two methods to achieve the result i.e playing respective sound clip on the click of the button.
+ 
+ 1. Create a new varible of dataType String and using it throughout.
+ 2. Modify the functon 'playSound' to be a function with input parameter.
+ */

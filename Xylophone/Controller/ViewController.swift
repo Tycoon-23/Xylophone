@@ -11,7 +11,7 @@ import AVFoundation
 class ViewController: UIViewController {
     
     var player: AVAudioPlayer!
-    //var soundName: String = "null" //1
+    //var soundName: String = "null"    //1
 
     @IBAction func keyPressed(_ sender: UIButton) {
         //soundName = sender.titleLabel!.text! //OR
@@ -24,8 +24,8 @@ class ViewController: UIViewController {
               //Bring's sender's opacity back up to fully opaque.
               sender.alpha = 1.0
           }
-        
-        playSound(soundName: sender.title(for: .normal)!)
+        //playSound()   //1
+        playSound(soundName: sender.title(for: .normal)!)   //2
     }
     
     //using method 1
@@ -33,7 +33,6 @@ class ViewController: UIViewController {
         let url = Bundle.main.url(forResource: soundName, withExtension: "wav")
         player = try! AVAudioPlayer(contentsOf: url!)
         player.play()
-                
     }*/
     
     //using method 2

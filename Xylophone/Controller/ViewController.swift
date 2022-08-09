@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         //soundName = sender.title(for: .normal)! //OR
         //soundName = sender.currentTitle!
         
+    //Fades out the button on click
         sender.alpha = 0.5
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
               //Bring's sender's opacity back up to fully opaque.
@@ -40,7 +41,6 @@ class ViewController: UIViewController {
         let url = Bundle.main.url(forResource: soundName, withExtension: "wav")
         player = try! AVAudioPlayer(contentsOf: url!)
         player.play()
-                
     }
 }
 

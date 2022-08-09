@@ -58,13 +58,29 @@
 			children = (
 				48117617289AB8E3002573F4 /* AppDelegate.swift */,
 				48117619289AB8E3002573F4 /* SceneDelegate.swift */,
-				4811761B289AB8E3002573F4 /* ViewController.swift */,
-				4811761D289AB8E3002573F4 /* Main.storyboard */,
+				48E922C828A235FB00AF84E9 /* View */,
+				48E922C728A235EB00AF84E9 /* Controller */,
 				48117620289AB8E5002573F4 /* Assets.xcassets */,
 				48117622289AB8E5002573F4 /* LaunchScreen.storyboard */,
 				48117625289AB8E5002573F4 /* Info.plist */,
 			);
 			path = Xylophone;
+			sourceTree = "<group>";
+		};
+		48E922C728A235EB00AF84E9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4811761B289AB8E3002573F4 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		48E922C828A235FB00AF84E9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4811761D289AB8E3002573F4 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
